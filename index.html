@@ -11,7 +11,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Descubra sua rotina de skincare perfeita – Grátis, seguro e sem cadastro</title>
 
-</title>
   <meta name="description" content="Dicas de skincare personalizadas com a Clara IA.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -228,7 +227,7 @@
       text-align: center;
       font-size: 0.85rem;
       color: #666;
-    }video-fallback
+    }
     .legal-links {
       margin-top: 10px;
     }
@@ -243,10 +242,25 @@
   font-weight: 700;
   display: block;
 }
+@media (max-width: 768px) {
+  .hero-video-bg {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  header {
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+  }
+}
 
   </style>
 </head>
 <body>
+
+</div>
 
   <div class="top-bar">💖 Mais de 10.000 usuárias satisfeitas | 🔐 Atendimento seguro e sem cadastro | 👩‍⚕️ Baseado em ciência dermatológica</div>
   <header>
@@ -276,14 +290,12 @@
   </header>
   <main>
     <div class="video-container" data-aos="fade-up">
-  <video controls muted playsinline style="width:100%; border-radius:12px;">
-    <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751872263/claraia.mp4_tx50fm.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo em HTML5.
-  </video>
-</div>
+     <video controls muted playsinline style="width:100%; border-radius:12px;">
+  <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751872263/claraia.mp4_tx50fm.mp4" type="video/mp4">
+  Seu navegador não suporta vídeo em HTML5.
+</video>
 
-
-
+    </div>
     <button class="chat-button" onclick="abrirChat()" data-aos="zoom-in">👩‍⚕️ Quero minha rotina personalizada </button>
     <div class="affiliate-note">As recomendações da Clara podem conter links de afiliado — isso nos ajuda a manter o atendimento gratuito, sem alterar o valor que você paga.</div>
     <ul class="benefits" data-aos="fade-up">
@@ -390,10 +402,6 @@
   else{ window.addEventListener("load", onLoad) }
 })();
 </script>
-<script>
-  document.getElementById("hero-video").load(); // força carregar o vídeo ao abrir
-</script>
-
 
 </body>
 </html>
