@@ -122,9 +122,12 @@
     }
     .video-container {
   width: 100%;
+  max-width: 100%;
   margin: 30px 0;
   border-radius: 12px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .video-container video {
@@ -134,6 +137,7 @@
   display: block;
   max-width: 100%;
 }
+
 
     .chat-button {
       background: var(--primary);
@@ -293,12 +297,12 @@
   </header>
   <main>
     <div class="video-container" data-aos="fade-up">
-     <video controls muted playsinline style="width:100%; border-radius:12px;">
-  <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751872263/claraia.mp4_tx50fm.mp4" type="video/mp4">
-  Seu navegador não suporta vídeo em HTML5.
-</video>
+  <video controls muted playsinline style="width:100%; border-radius:12px;">
+    <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751872263/claraia.mp4_tx50fm.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+</div>
 
-    </div>
     <button class="chat-button" onclick="abrirChat()" data-aos="zoom-in">👩‍⚕️ Quero minha rotina personalizada </button>
     <div class="affiliate-note">As recomendações da Clara podem conter links de afiliado — isso nos ajuda a manter o atendimento gratuito, sem alterar o valor que você paga.</div>
     <ul class="benefits" data-aos="fade-up">
