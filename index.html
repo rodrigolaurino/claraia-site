@@ -137,9 +137,6 @@
   display: block;
   max-width: 100%;
 }
-
-
-
     .chat-button {
       background: var(--primary);
       color: #fff;
@@ -253,60 +250,61 @@
 @media (max-width: 768px) {
   header {
     padding: 0;
-    min-height: unset;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
   }
 
+  /* banner no celular */
   .hero-video-bg {
     position: relative;
     width: 100%;
+    max-width: 600px;
     height: auto;
+    aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 12px;
-    max-height: 240px;
     z-index: 1;
   }
 
   header::before {
-    background: none;
+    /* remove a camada escura no celular */
+    background: transparent;
   }
 
+  /* centraliza logo e texto */
   .logo-text {
     position: static;
-    margin-top: 16px;
+    margin: 16px 0;
     text-align: center;
   }
 
+  /* redimensiona logo Clara IA */
   .logo-clara .clara {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
-
-  .ia-circle {
-    font-size: 0.9rem;
-    margin-top: 2px;
+  .logo-clara .ia-circle {
+    font-size: 1rem;
+    margin-top: 0;
   }
-
   .subtext {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     margin-top: 4px;
   }
 
+  /* título e intro */
   .header-content {
     padding: 16px;
-    text-align: center;
   }
-
   .header-content h1 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
-
   .intro p {
     font-size: 0.9rem;
   }
 }
+
 
 
   </style>
