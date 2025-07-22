@@ -17,6 +17,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
+    .desktop-video { display: block; }
+.mobile-video { display: none; }
+
+.mobile-text { display: none; }
+.desktop-text { display: block; }
+
+@media (max-width: 768px) {
+  .desktop-video { display: none; }
+  .mobile-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 12px;
+  }
+
+  .desktop-text { display: none; }
+  .mobile-text {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+
+  header::before {
+    background: transparent;
+  }
+
+  .logo-text {
+    position: static;
+    text-align: center;
+    margin: 16px 0;
+  }
+}
+
     :root {
       --bg: #F1F6F5;
       --primary: #2F5D62;
@@ -314,29 +347,49 @@
 <body>
 
   <div class="top-bar">💖 Mais de 10.000 usuárias satisfeitas | 🔐 Atendimento seguro e sem cadastro | 👩‍⚕️ Baseado em ciência dermatológica</div>
-  <header>
-    <video autoplay loop muted playsinline class="hero-video-bg" id="hero-video" poster="https://res.cloudinary.com/..." aria-label="Vídeo promocional Clara IA">
-  <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751826847/BannerClaraIA_tpajdv.mp4" type="video/mp4" />
-  Seu navegador não suporta vídeo em HTML5.
-</video>
 
 
-    <div class="logo-text">
-      <div class="logo-clara">
-        <span class="clara">CLARA</span>
-        <span class="ia-circle">IA</span>
-      </div>
-      <div class="subtext">SKINCARE</div>
+
+   <header>
+  <!-- VÍDEO DESKTOP -->
+  <video autoplay loop muted playsinline class="hero-video-bg desktop-video" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png">
+    <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751826847/BannerClaraIA_tpajdv.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <!-- VÍDEO MOBILE -->
+  <video autoplay loop muted playsinline class="hero-video-bg mobile-video" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png" aria-label="Vídeo institucional Clara IA">
+    <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1753208212/bannerclaraia-tpajdv-2_474SPkLR_online-video-cutter.com_1_vl21kr.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <div class="logo-text">
+    <div class="logo-clara">
+      <span class="clara">CLARA</span>
+      <span class="ia-circle">IA</span>
     </div>
-    <div class="header-content" data-aos="fade-down">
-      <h1><span class="linha-maior">Descubra sua rotina de skincare perfeita </span><br>Grátis, seguro e sem cadastro</h1>
-      
-      <div class="intro" data-aos="fade-up" data-aos-delay="200">
-        <p>Oi! Eu sou a Clara, sua assistente virtual de skincare.</p>
-<p>Fui criada para te ajudar a entender melhor sua pele e montar uma rotina de cuidados personalizada, segura e baseada em ciência dermatológica.</p>
-      </div>
+    <div class="subtext">SKINCARE</div>
+  </div>
+
+  <!-- TEXTOS: VERSÃO DESKTOP -->
+  <div class="header-content desktop-text" data-aos="fade-down">
+    <h1><span class="linha-maior">Descubra sua rotina de skincare perfeita </span><br>Grátis, seguro e sem cadastro</h1>
+    <div class="intro" data-aos="fade-up" data-aos-delay="200">
+      <p>Oi! Eu sou a Clara, sua assistente virtual de skincare.</p>
+      <p>Fui criada para te ajudar a entender melhor sua pele e montar uma rotina de cuidados personalizada, segura e baseada em ciência dermatológica.</p>
     </div>
-  </header>
+  </div>
+
+  <!-- TEXTOS: VERSÃO MOBILE -->
+  <div class="header-content mobile-text">
+    <h1><span class="linha-maior">Sua rotina de skincare ideal</span><br>Grátis, personalizada e sem cadastro</h1>
+    <div class="intro">
+      <p>Oi! Eu sou a Clara, sua guia de skincare.</p>
+      <p>Te ajudo a entender sua pele e montar uma rotina simples, segura e baseada na ciência.</p>
+    </div>
+  </div>
+</header>
+
   <main>
    <div class="video-container" data-aos="fade-up">
 <video controls muted playsinline style="width:100%; border-radius:12px;" aria-label="Vídeo explicativo sobre a Clara IA">
