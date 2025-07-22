@@ -17,12 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
-    .desktop-video { display: block; }
-.mobile-video { display: none; }
-
-.mobile-text { display: none; }
-.desktop-text { display: block; }
-
+   
 @media (max-width: 768px) {
   .desktop-video { display: none; }
   .mobile-video {
@@ -339,7 +334,7 @@
     font-size: 0.9rem;
   }
 }
-/* === Controle de visibilidade para versões desktop e mobile === */
+/* Visibilidade mobile/desktop */
 .desktop-only { display: block; }
 .mobile-only { display: none; }
 
@@ -347,6 +342,7 @@
   .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
 }
+
 
 
   </style>
@@ -358,16 +354,18 @@
   <header>
   <!-- VÍDEO DESKTOP -->
   <div class="desktop-only">
-    <video autoplay loop muted playsinline class="hero-video-bg" poster="LINK">
-      <source src="LINK" type="video/mp4">
+    <video autoplay loop muted playsinline class="hero-video-bg" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png">
+  <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751826847/BannerClaraIA_tpajdv.mp4" type="video/mp4">
+
       Seu navegador não suporta vídeo em HTML5.
     </video>
   </div>
 
   <!-- VÍDEO MOBILE -->
   <div class="mobile-only">
-    <video autoplay loop muted playsinline class="hero-video-bg" poster="LINK" aria-label="Vídeo institucional Clara IA">
-      <source src="LINK" type="video/mp4">
+    <video autoplay loop muted playsinline class="hero-video-bg" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png" aria-label="Vídeo institucional Clara IA">
+  <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1753208212/bannerclaraia-tpajdv-2_474SPkLR_online-video-cutter.com_1_vl21kr.mp4" type="video/mp4">
+
       Seu navegador não suporta vídeo em HTML5.
     </video>
   </div>
