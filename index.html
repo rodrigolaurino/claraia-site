@@ -9,42 +9,38 @@
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
   <style>
     :root {
-      --bg: #F1F6F5;
       --primary: #2F5D62;
-      --text: #4E7580;
-      --card-bg: #FFFFFF;
-      --shadow: rgba(47, 93, 98, 0.1);
+      --text-light: #ffffff;
+      --text-dark: #333;
+      --card-bg: #ffffff;
+      --bg: #F1F6F5;
+      --shadow: rgba(0,0,0,0.1);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Montserrat', sans-serif;
       background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      color: var(--text-dark);
     }
 
     .top-bar {
       background: var(--primary);
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 8px 12px;
-      font-size: 0.9rem;
+      padding: 10px;
+      font-size: 0.95rem;
     }
 
     header {
       position: relative;
-      width: 100%;
       height: 100vh;
       overflow: hidden;
     }
@@ -53,17 +49,17 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
       height: 100%;
+      width: 100%;
       object-fit: cover;
       z-index: 0;
     }
 
     header::before {
-      content: "";
+      content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.55);
+      background-color: rgba(0, 0, 0, 0.55);
       z-index: 1;
     }
 
@@ -77,83 +73,180 @@
       top: 20px;
       left: 20px;
       font-family: 'Playfair Display', serif;
-      color: #fff;
+      color: white;
     }
 
     .logo-clara {
       display: flex;
+      gap: 5px;
       align-items: flex-start;
-      gap: 6px;
     }
 
     .logo-clara .clara {
       font-size: 2rem;
       font-weight: 600;
-      letter-spacing: 1px;
     }
 
     .logo-clara .ia-circle {
       font-size: 1.1rem;
       font-weight: bold;
-      color: #fff;
     }
 
     .subtext {
       font-size: 0.75rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      font-weight: 300;
+      margin-top: 2px;
     }
 
     .header-content {
-      max-width: 700px;
-      margin: 0 auto;
       text-align: center;
+      color: white;
       padding-top: 200px;
-      color: #fff;
+      max-width: 700px;
+      margin: auto;
     }
 
     .header-content h1 {
       font-size: 2rem;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
 
-    .intro p {
+    .header-content p {
       font-size: 1.1rem;
-      margin-top: 12px;
+      margin: 6px 0;
       text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
 
     main {
       max-width: 960px;
-      margin: 60px auto;
-      padding: 40px 20px;
+      margin: 0 auto;
+      padding: 60px 20px;
       text-align: center;
+    }
+
+    .video-container {
+      margin: 40px 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
     }
 
     .chat-button {
       background: var(--primary);
-      color: #fff;
-      padding: 14px 28px;
+      color: white;
       font-size: 1.1rem;
+      padding: 14px 28px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      margin: 30px auto;
+      display: inline-block;
       transition: background 0.3s;
-      margin-top: 30px;
     }
 
     .chat-button:hover {
       background: #1e3d3f;
     }
 
+    .affiliate-note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 20px;
+    }
+
+    ul.benefits {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    ul.benefits li {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .depoimentos-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px var(--shadow);
+      max-width: 280px;
+      text-align: left;
+    }
+
+    .card .author {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .card .stars {
+      color: #FFD700;
+      font-size: 1rem;
+    }
+
+    .card p {
+      color: #333;
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    .faq {
+      text-align: left;
+      max-width: 700px;
+      margin: 60px auto;
+    }
+
+    .faq h3 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      margin-top: 5px;
+      color: #444;
+      font-size: 0.95rem;
+      display: none;
+    }
+
+    .faq-answer.active {
+      display: block;
+    }
+
     footer {
       margin-top: 60px;
-      padding: 20px 0;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #666;
+      padding: 20px 0;
     }
 
     .legal-links {
@@ -172,9 +265,8 @@
   <div class="top-bar">💖 Mais de 10.000 usuárias satisfeitas | 🔐 Atendimento seguro e sem cadastro | 👩‍⚕️ Baseado em ciência dermatológica</div>
 
   <header>
-    <video autoplay loop muted playsinline class="hero-video-bg" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png">
+    <video autoplay loop muted playsinline class="hero-video-bg" preload="auto" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png">
       <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751826847/BannerClaraIA_tpajdv.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo em HTML5.
     </video>
 
     <div class="logo-text">
@@ -187,15 +279,68 @@
 
     <div class="header-content">
       <h1>Descubra sua rotina de skincare perfeita</h1>
-      <div class="intro">
-        <p>Oi! Eu sou a Clara, sua assistente virtual de skincare.</p>
-        <p>Fui criada para te ajudar a entender melhor sua pele e montar uma rotina de cuidados personalizada.</p>
-      </div>
+      <p><strong>Grátis, seguro e sem cadastro</strong></p>
+      <p>Oi! Eu sou a Clara, sua assistente virtual de skincare.</p>
+      <p>Fui criada para te ajudar a entender melhor sua pele e montar uma rotina personalizada.</p>
     </div>
   </header>
 
   <main>
-    <button class="chat-button" onclick="abrirChat()" data-aos="zoom-in">👩‍⚕️ Quero minha rotina personalizada</button>
+    <div class="video-container">
+      <video controls muted playsinline aria-label="Vídeo de apresentação da Clara IA">
+        <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751872263/claraia.mp4_tx50fm.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <button class="chat-button" onclick="abrirChat()">👩‍⚕️ Quero minha rotina personalizada</button>
+
+    <div class="affiliate-note">As recomendações da Clara podem conter links de afiliado — isso nos ajuda a manter o atendimento gratuito, sem alterar o valor que você paga.</div>
+
+    <ul class="benefits">
+      <li>📌 Disponível 24/7</li>
+      <li>🔬 Base científica e dermatológica</li>
+      <li>🔄 Rotina personalizada para seu tipo de pele</li>
+      <li>💬 Atendimento empático com IA avançada</li>
+      <li>🌿 Recomendações seguras e conscientes</li>
+      <li>✨ Praticidade sem cadastro</li>
+    </ul>
+
+    <div class="depoimentos-grid">
+      <div class="card">
+        <div class="author">Amanda R. – 28</div>
+        <div class="stars">⭐⭐⭐⭐☆</div>
+        <p>Clara me ajudou a controlar a oleosidade da pele.</p>
+      </div>
+      <div class="card">
+        <div class="author">Renata M. – 31</div>
+        <div class="stars">⭐⭐⭐⭐✮</div>
+        <p>Minha rotina mudou e senti a pele mais hidratada.</p>
+      </div>
+      <div class="card">
+        <div class="author">Beatriz C. – 26</div>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>Atendimento automático com toque humano!</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <h3>FAQ – Perguntas Frequentes</h3>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">Como a Clara personaliza minha rotina de skincare?</div>
+        <div class="faq-answer">Com base nas suas respostas sobre tipo de pele, rotina atual e objetivos. A IA sugere produtos e passos personalizados.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">É seguro usar inteligência artificial para cuidados com a pele?</div>
+        <div class="faq-answer">Sim! A Clara usa referências científicas confiáveis e evita produtos agressivos.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">Preciso criar uma conta?</div>
+        <div class="faq-answer">Não. O atendimento é 100% gratuito e sem necessidade de cadastro.</div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -206,16 +351,18 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
-
     function abrirChat() {
       if (window.chatbase && typeof window.chatbase === "function") {
         window.chatbase("open");
       } else {
         alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
       }
+    }
+
+    function toggleFAQ(el) {
+      const answer = el.nextElementSibling;
+      answer.classList.toggle('active');
     }
   </script>
 </body>
