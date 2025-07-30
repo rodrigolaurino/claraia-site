@@ -41,14 +41,14 @@
       padding: 8px 12px;
       font-size: 0.9rem;
     }
-    header {
-      position: relative;
-      padding: 60px 20px 40px;
-      color: #fff;
-      min-height: 350px;
-      overflow: hidden;
-    }
-    /* hero-video como fundo no desktop */
+   header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+}
+
 .hero-video-bg.desktop {
   position: absolute;
   top: 0;
@@ -56,35 +56,23 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 5;
+  z-index: 0;
 }
 
-/* hero-video como elemento comum no mobile */
-.hero-video-bg.mobile {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
-  border-radius: 12px;
-  margin-top: 12px;
+/* Camada escura por cima */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
-  position: relative;
 }
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 1;
-    }
-    header * { position: relative; z-index: 2; }
-    .logo-text {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-family: 'Playfair Display', serif;
-      color: #fff;
-      z-index: 2;
-    }
+
+/* Conteúdo do header por cima do vídeo */
+header * {
+  position: relative;
+  z-index: 2;
+}
     .logo-clara {
       display: inline-flex;
       align-items: flex-start;
