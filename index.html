@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dicas de skincare personalizadas com a Clara IA.">
+  <meta name="description" content="Monte sua rotina de cuidados com a pele com ajuda da Clara IA – gratuito e baseado em ciência dermatológica.">
   <title>Clara IA – Skincare Personalizado</title>
 
-  <!-- Fontes Google -->
+  <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-  <!-- Biblioteca AOS -->
+  <!-- AOS Animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
+
   <style>
     :root {
       --bg: #F1F6F5;
@@ -20,13 +20,20 @@
       --card-bg: #FFFFFF;
       --shadow: rgba(47, 93, 98, 0.1);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
+
     .top-bar {
       background: var(--primary);
       color: #fff;
@@ -34,106 +41,97 @@
       padding: 8px 12px;
       font-size: 0.9rem;
     }
-   header {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  padding: 0;
-}
 
-.hero-video-bg.desktop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-/* Camada escura por cima */
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-}
+    .hero-video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
 
-/* Conteúdo do header por cima do vídeo */
-header * {
-  position: relative;
-  z-index: 2;
-}
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    header * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-text {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+    }
+
     .logo-clara {
-      display: inline-flex;
+      display: flex;
       align-items: flex-start;
       gap: 6px;
-      position: relative;
     }
+
     .logo-clara .clara {
       font-size: 2rem;
       font-weight: 600;
       letter-spacing: 1px;
     }
+
     .logo-clara .ia-circle {
-  font-size: 1.1rem;
-  background-color: transparent;
-  color: #ffffff;
-  font-weight: bold;
-  line-height: 1;
-  align-self: flex-start;
-  margin-top: 4px;
-  padding: 0;
-  border-radius: 0;
-}
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
     .subtext {
-      text-align: center;
       font-size: 0.75rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 300;
-      margin-top: 2px;
     }
+
     .header-content {
       max-width: 700px;
       margin: 0 auto;
       text-align: center;
+      padding-top: 200px;
+      color: #fff;
     }
+
     .header-content h1 {
-      font-size: 1.2rem;
+      font-size: 2rem;
       margin-bottom: 14px;
-      text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
+
     .intro p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin-top: 12px;
-      text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
+
     main {
       max-width: 960px;
-      margin: 0 auto;
+      margin: 60px auto;
       padding: 40px 20px;
       text-align: center;
     }
-    .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 30px 0;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  border: none;
-  display: block;
-  max-width: 100%;
-}
     .chat-button {
       background: var(--primary);
       color: #fff;
@@ -143,94 +141,13 @@ header * {
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.3s;
-      margin: 30px auto;
-      display: inline-block;
+      margin-top: 30px;
     }
-    .chat-button:hover { background: #1e3d3f; }
-    .affiliate-note {
-      font-size: 0.85rem;
-      color: #888;
-      margin-top: 12px;
-    }
-    .affiliate-note::before { content: "\1F4B3 "; }
-    ul.benefits {
-      text-align: left;
-      max-width: 700px;
-      margin: 40px auto;
-      list-style: none;
-    }
-    ul.benefits li {
-      margin-bottom: 10px;
-      font-size: 1.05rem;
-    }
-    ul.benefits li {
-  color: var(--primary);
-}
 
-    .depoimentos-grid {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin: 50px 0;
-      flex-wrap: wrap;
+    .chat-button:hover {
+      background: #1e3d3f;
     }
-    .card {
-      background: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 2px 6px var(--shadow);
-      flex: 1 1 28%;
-      padding: 15px;
-      text-align: left;
-      min-width: 240px;
-      max-width: 280px;
-    }
-    .author {
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-    .stars {
-      color: #FFD700;
-      margin: 4px 0;
-      font-size: 0.95rem;
-    }
-    .card p {
-      font-size: 0.9rem;
-    }
-    .card p {
-  color: var(--primary);
-}
 
-    .faq {
-      max-width: 700px;
-      margin: 60px auto;
-      text-align: left;
-    }
-    .faq h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-    .faq-item {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
-    }
-    .faq-question {
-      cursor: pointer;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--primary);
-    }
-    .faq-answer {
-      display: none;
-      padding-left: 10px;
-      color: #555;
-      font-size: 0.9rem;
-    }
-    .faq-answer.active {
-      display: block;
-    }
     footer {
       margin-top: 60px;
       padding: 20px 0;
@@ -238,222 +155,49 @@ header * {
       font-size: 0.85rem;
       color: #666;
     }
+
     .legal-links {
       margin-top: 10px;
     }
+
     .legal-links a {
       color: var(--primary);
       text-decoration: none;
       margin: 0 10px;
     }
-    
-.linha-maior {
-  font-size: 2rem;
-  font-weight: 700;
-  display: block;
-}
-@media (max-width: 768px) {
-  header {
-    padding: 0 16px 24px;
-    background: var(--bg);
-  }
-
-  header::before {
-    background: transparent !important;
-  }
-
-  .logo-text {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  text-align: left;
-}
-  .header-content.mobile-only {
-    color: var(--primary);
-    margin-top: 12px;
-  }
-  .header-content h1 {
-    font-size: 1.2rem;
-  }
-
-  .intro p {
-    font-size: 0.9rem;
-  }
-}
-
-
-  header::before {
-    /* remove a camada escura no celular */
-    background: transparent;
-  }
-
-  /* centraliza logo e texto */
-  .logo-text {
-    position: static;
-    margin: 16px 0;
-    text-align: center;
-  }
-
-  /* redimensiona logo Clara IA */
-  .logo-clara .clara {
-    font-size: 1.8rem;
-  }
-  .logo-clara .ia-circle {
-    font-size: 1rem;
-    margin-top: 0;
-  }
-  .subtext {
-    font-size: 0.7rem;
-    margin-top: 4px;
-  }
-
-  /* título e intro */
-  .header-content {
-    padding: 16px;
-  }
-  .header-content h1 {
-    font-size: 1.2rem;
-  }
-  .intro p {
-    font-size: 0.9rem;
-  }
-}
-/* Visibilidade mobile/desktop */
-.desktop-only { display: block; }
-.mobile-only { display: none; }
-
-@media (max-width: 768px) {
-  .desktop-only { display: none !important; }
-  .mobile-only { display: block !important; }
-}
-@media (max-width: 768px) {
-  .logo-clara .ia-circle {
-    color: var(--primary); /* mesma cor do texto geral */
-  }
-}
-
-
-
   </style>
 </head>
 <body>
 
   <div class="top-bar">💖 Mais de 10.000 usuárias satisfeitas | 🔐 Atendimento seguro e sem cadastro | 👩‍⚕️ Baseado em ciência dermatológica</div>
-  <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751826847/BannerClaraIA_tpajdv.mp4" type="video/mp4">
-  Seu navegador não suporta vídeo em HTML5.
-</video>
 
   <header>
- <!-- VÍDEO DESKTOP -->
-<div class="desktop-only">
-  <video autoplay loop muted playsinline class="hero-video-bg desktop" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png">
-    <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751826847/BannerClaraIA_tpajdv.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo em HTML5.
-  </video>
-</div>
-
-
-  <!-- VÍDEO MOBILE -->
-  <div class="mobile-only">
-    <video autoplay loop muted playsinline class="hero-video-bg mobile" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png" aria-label="Vídeo institucional Clara IA">
-      <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1753208212/bannerclaraia-tpajdv-2_474SPkLR_online-video-cutter.com_1_vl21kr.mp4" type="video/mp4">
+    <video autoplay loop muted playsinline class="hero-video-bg" poster="https://res.cloudinary.com/dq2edkm7i/image/upload/v1752605190/ChatGPT_Image_15_de_jul._de_2025_19_46_08_r7k8xs.png">
+      <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751826847/BannerClaraIA_tpajdv.mp4" type="video/mp4">
       Seu navegador não suporta vídeo em HTML5.
     </video>
-  </div>
 
-  <!-- Logo -->
-  <div class="logo-text">
-    <div class="logo-clara">
-      <span class="clara">CLARA</span>
-      <span class="ia-circle">IA</span>
+    <div class="logo-text">
+      <div class="logo-clara">
+        <span class="clara">CLARA</span>
+        <span class="ia-circle">IA</span>
+      </div>
+      <div class="subtext">SKINCARE</div>
     </div>
-    <div class="subtext">SKINCARE</div>
-  </div>
 
-  <!-- Texto Desktop -->
-  <div class="header-content desktop-only">
-    <h1><span class="linha-maior">Descubra sua rotina de skincare perfeita</span><br>Grátis, seguro e sem cadastro</h1>
-    <div class="intro">
-      <p>Oi! Eu sou a Clara, sua assistente virtual de skincare.</p>
-      <p>Fui criada para te ajudar a entender melhor sua pele e montar uma rotina de cuidados personalizada.</p>
+    <div class="header-content">
+      <h1>Descubra sua rotina de skincare perfeita</h1>
+      <div class="intro">
+        <p>Oi! Eu sou a Clara, sua assistente virtual de skincare.</p>
+        <p>Fui criada para te ajudar a entender melhor sua pele e montar uma rotina de cuidados personalizada.</p>
+      </div>
     </div>
-  </div>
-
-  <!-- Texto Mobile -->
-  <div class="header-content mobile-only">
-    <h1><span class="linha-maior">Sua rotina de skincare ideal</span><br>Grátis, personalizada e sem cadastro</h1>
-    <div class="intro">
-      <p>Oi! Eu sou a Clara, sua guia de skincare.</p>
-      <p>Te ajudo a entender sua pele e montar uma rotina simples e segura.</p>
-    </div>
-  </div>
-</header>
-
+  </header>
 
   <main>
-   <div class="video-container" data-aos="fade-up">
-<video controls muted playsinline style="width:100%; border-radius:12px;" aria-label="Vídeo explicativo sobre a Clara IA">
-
-    <source src="https://res.cloudinary.com/dq2edkm7i/video/upload/v1751872263/claraia.mp4_tx50fm.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo em HTML5.
-  </video>
-</div>
-
-    <button class="chat-button" onclick="abrirChat()" data-aos="zoom-in">👩‍⚕️ Quero minha rotina personalizada </button>
-    <div class="affiliate-note">As recomendações da Clara podem conter links de afiliado — isso nos ajuda a manter o atendimento gratuito, sem alterar o valor que você paga.</div>
-    <ul class="benefits" data-aos="fade-up">
-      <li>📌 Disponível 24/7</li>
-      <li>🔬 Base científica e dermatológica</li>
-      <li>🔄 Rotina personalizada para seu tipo de pele</li>
-      <li>💬 Atendimento empático com IA avançada</li>
-      <li>🌿 Recomendações seguras e conscientes</li>
-      <li>✨ Praticidade sem cadastro</li>
-    </ul>
-    <div class="depoimentos-grid">
-      <div class="card" data-aos="fade-up">
-        <div class="author">Amanda R. – 28</div>
-        <div class="stars">⭐⭐⭐⭐☆</div>
-        <p>Clara me ajudou a controlar a oleosidade da pele.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <div class="author">Renata M. – 31</div>
-        <div class="stars">⭐⭐⭐⭐✮</div>
-        <p>Minha rotina mudou e senti a pele mais hidratada.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <div class="author">Beatriz C. – 26</div>
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>Atendimento automático com toque humano!</p>
-      </div>
-    </div>
-    <div class="faq" data-aos="fade-up">
-      <h3>FAQ – Perguntas Frequentes</h2>
-      <div class="faq-item">
-  <h3 class="faq-question" onclick="toggleFAQ(this)">Como a Clara personaliza minha rotina de skincare?</h3>
-  <div class="faq-answer">A Clara analisa suas respostas sobre tipo de pele, rotina atual e objetivos (como hidratação, controle de oleosidade, acne, manchas, etc.). Com base nisso, ela sugere produtos e passos personalizados, usando conhecimento de dermatologia e boas práticas de cuidados com a pele.</div>
-</div>
-<div class="faq-item">
-  <h3 class="faq-question" onclick="toggleFAQ(this)">É seguro usar inteligência artificial para cuidados com a pele?</h3>
-  <div class="faq-answer">Sim. A Clara não substitui um dermatologista, mas foi desenvolvida com base em referências confiáveis da dermatologia. Todas as recomendações seguem boas práticas e indicam produtos com composição segura e amplamente estudada. Em casos de condições clínicas, sempre indicamos procurar um profissional.</div>
-</div>
-<div class="faq-item">
-  <h3 class="faq-question" onclick="toggleFAQ(this)">Preciso criar uma conta para usar a Clara?</h3>
-  <div class="faq-answer">Não. O atendimento é 100% gratuito e sem necessidade de cadastro. Você pode iniciar a conversa a qualquer momento, de forma anônima e prática.</div>
-</div>
-<div class="faq-item">
-  <h3 class="faq-question" onclick="toggleFAQ(this)">A Clara recomenda produtos de alguma marca específica?</h3>
-  <div class="faq-answer">Não. As sugestões da Clara são baseadas nos ingredientes, formulações e eficácia para o seu tipo de pele — e não em parcerias comerciais. A ideia é te mostrar boas opções do mercado, com base científica, de forma imparcial.</div>
-</div>
-<div class="faq-item">
-  <h3 class="faq-question" onclick="toggleFAQ(this)">Posso confiar nas recomendações mesmo com pele sensível?</h3>
-  <div class="faq-answer">Sim. A Clara considera se sua pele é sensível ao montar a rotina. Ela evita sugerir ativos agressivos ou produtos com alta chance de causar irritação. Se você tiver alergias específicas, é sempre bom verificar o rótulo dos produtos indicados.</div>
-</div>
-<div class="faq-item">
-  <h3 class="faq-question" onclick="toggleFAQ(this)">O atendimento é feito por humanos ou só por IA?</h3>
-  <div class="faq-answer">O atendimento é feito por inteligência artificial, mas com linguagem empática, clara e educativa. A Clara foi treinada para simular uma conversa fluida, com foco em orientação e não em vendas. Toda a experiência é automatizada, mas pensada para ser acolhedora.</div>
-</div>
-
+    <button class="chat-button" onclick="abrirChat()" data-aos="zoom-in">👩‍⚕️ Quero minha rotina personalizada</button>
   </main>
+
   <footer>
     © 2025 dicasdeskincareia.com.br — Powered by Clara IA 🌿
     <div class="legal-links">
@@ -461,52 +205,18 @@ header * {
       <a href="termos.html">Termos de Uso</a>
     </div>
   </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-   function abrirChat() {
-  if (window.chatbase && typeof window.chatbase === "function") {
-    window.chatbase("open");
-  } else {
-    alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
-  }
-}
 
-
-
-    function toggleFAQ(el) {
-      const ans = el.nextElementSibling;
-      ans.classList.toggle('active');
+    function abrirChat() {
+      if (window.chatbase && typeof window.chatbase === "function") {
+        window.chatbase("open");
+      } else {
+        alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
+      }
     }
   </script>
-<script>
-  
-</script>
-<script>
-(function(){
-  if(!window.chatbase || window.chatbase("getState")!=="initialized"){
-    window.chatbase=(...arguments)=>{
-      if(!window.chatbase.q){ window.chatbase.q=[] }
-      window.chatbase.q.push(arguments)
-    };
-    window.chatbase=new Proxy(window.chatbase,{
-      get(target,prop){
-        if(prop==="q"){ return target.q }
-        return(...args)=>target(prop,...args)
-      }
-    })
-  }
-  const onLoad=function(){
-    const script=document.createElement("script");
-    script.src="https://www.chatbase.co/embed.min.js";
-    script.id="XzReKVX4FbVIc6YSYHoMa"; // Esse é seu bot ID
-    script.domain="www.chatbase.co";
-    document.body.appendChild(script)
-  };
-  if(document.readyState==="complete"){ onLoad() }
-  else{ window.addEventListener("load", onLoad) }
-})();
-</script>
-
 </body>
 </html>
