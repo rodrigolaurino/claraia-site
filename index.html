@@ -384,18 +384,19 @@
   </footer>
 
   <script>
-    function abrirChat() {
-      if (window.chatbase && typeof window.chatbase === "function") {
-        window.chatbase("open");
-      } else {
-        alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
-      }
-    }
+function abrirChat() {
+  if (window.chatbase && typeof window.chatbase === "function") {
+    window.chatbase("open");
+  } else {
+    alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
+  }
+}
 
-    function toggleFAQ(el) {
-      const answer = el.nextElementSibling;
-      answer.classList.toggle('active');
-    }
-  </script>
+function toggleFAQ(el) {
+  const answer = el.nextElementSibling;
+  answer.classList.toggle('active');
+}
+</script>
+
 </body>
 </html>
