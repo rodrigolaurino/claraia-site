@@ -260,6 +260,38 @@
     }
   </style>
 </head>
+  <script>
+(function(){
+  if(!window.chatbase || window.chatbase("getState") !== "initialized"){
+    window.chatbase = (...arguments) => {
+      if (!window.chatbase.q) { window.chatbase.q = [] }
+      window.chatbase.q.push(arguments)
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop) {
+        if (prop === "q") { return target.q }
+        return (...args) => target(prop, ...args)
+      }
+    });
+  }
+
+  const onLoad = function(){
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "HkllXYITrvFzUmhxBg7BW";
+    script.setAttribute("chatbaseId", "HkllXYITrvFzUmhxBg7BW");
+    script.setAttribute("domain", "www.chatbase.co");
+    document.body.appendChild(script);
+  };
+
+  if (document.readyState === "complete") {
+    onLoad();
+  } else {
+    window.addEventListener("load", onLoad);
+  }
+})();
+</script>
+
 <body>
 
   <div class="top-bar">💖 Mais de 10.000 usuárias satisfeitas | 🔐 Atendimento seguro e sem cadastro | 👩‍⚕️ Baseado em ciência dermatológica</div>
