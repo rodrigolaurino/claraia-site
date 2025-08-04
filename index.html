@@ -440,11 +440,17 @@
   <script>
 function abrirChat() {
   try {
-  window.chatbase("open");
-} catch(e) {
-  alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
+    window.chatbase("open");
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17431950558/_WQ8CKPP8f4aEN7pmfhA',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+  } catch(e) {
+    alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
+  }
 }
-}
+
 
 function toggleFAQ(el) {
   const answer = el.nextElementSibling;
@@ -468,6 +474,7 @@ function toggleFAQ(el) {
 
 </body>
 </html>
+
 
 
 
