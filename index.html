@@ -431,11 +431,11 @@
 
   <script>
 function abrirChat() {
-  if (window.chatbase && typeof window.chatbase === "function") {
-    window.chatbase("open");
-  } else {
-    alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
-  }
+  try {
+  window.chatbase("open");
+} catch(e) {
+  alert("Estamos carregando a Clara IA... Tente novamente em instantes!");
+}
 }
 
 function toggleFAQ(el) {
@@ -460,6 +460,7 @@ function toggleFAQ(el) {
 
 </body>
 </html>
+
 
 
 
