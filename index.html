@@ -274,11 +274,18 @@
   min-width: 100vw;
   min-height: 100vh;
 }
-      .chatbase-card img {
-  max-width: 50px;
-  height: auto;
+      .chatbase-card img,
+.chatbase img,
+.chatbase .prose img,
+img[src*="amazon.com"] {
+  max-width: 120px !important;
+  height: auto !important;
+  display: block;
+  margin: 12px auto !important;
   border-radius: 8px;
+  object-fit: contain;
 }
+
 
   </style>
 </head>
@@ -479,6 +486,7 @@ function toggleFAQ(el) {
 
 </body>
 </html>
+
 
 
 
