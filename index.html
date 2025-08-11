@@ -40,10 +40,12 @@
     }
 
     header {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
+  position: relative;
+  height: 70vh; /* reduz altura para 70% da tela */
+  max-height: 600px; /* evita ficar gigante em telas grandes */
+  overflow: hidden;
+}
+
 
    .hero-video-bg {
   position: absolute;
@@ -284,6 +286,12 @@ img[src*="amazon.com"] {
   margin: 12px auto !important;
   border-radius: 8px;
   object-fit: contain;
+}
+@media (max-width: 768px) {
+  header {
+    height: 50vh;
+    max-height: 350px;
+  }
 }
 
 
@@ -528,6 +536,7 @@ function toggleFAQ(el) {
 
 </body>
 </html>
+
 
 
 
