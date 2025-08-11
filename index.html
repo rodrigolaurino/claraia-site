@@ -294,6 +294,17 @@ img[src*="amazon.com"] {
   }
 }
 
+    @media (max-width: 768px) {
+  header {
+    height: auto; /* altura baseada no conteúdo */
+    min-height: 500px; /* garante espaço pro texto e vídeo */
+  }
+  .hero-video-bg {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 
   </style>
 </head>
@@ -536,6 +547,7 @@ function toggleFAQ(el) {
 
 </body>
 </html>
+
 
 
 
