@@ -359,6 +359,11 @@ img[src*="amazon.com"] {
     </div>
   </header>
 
+  <div style="text-align:center; margin: 20px 0;">
+  <button class="chat-button" onclick="abrirChat()">👩‍⚕️ Quero minha rotina personalizada</button>
+</div>
+
+
   <main>
     <div class="video-container">
       <video controls muted playsinline aria-label="Vídeo de apresentação da Clara IA">
@@ -377,6 +382,27 @@ img[src*="amazon.com"] {
 
 
     <div class="affiliate-note">As recomendações da Clara podem conter links de afiliado — isso nos ajuda a manter o atendimento gratuito, sem alterar o valor que você paga.</div>
+
+    <section style="max-width: 900px; margin: 60px auto; text-align: center;">
+  <h2 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 30px;">Como funciona</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div style="flex: 1; min-width: 250px; background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 6px var(--shadow);">
+      <div style="font-size: 2rem;">🧴</div>
+      <h3 style="color: var(--primary); margin: 10px 0;">1. Conte sobre sua pele</h3>
+      <p>Responda algumas perguntas rápidas sobre seu tipo de pele e rotina.</p>
+    </div>
+    <div style="flex: 1; min-width: 250px; background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 6px var(--shadow);">
+      <div style="font-size: 2rem;">🤖</div>
+      <h3 style="color: var(--primary); margin: 10px 0;">2. Clara analisa</h3>
+      <p>A IA cruza suas respostas com ciência dermatológica para criar um plano.</p>
+    </div>
+    <div style="flex: 1; min-width: 250px; background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 6px var(--shadow);">
+      <div style="font-size: 2rem;">✨</div>
+      <h3 style="color: var(--primary); margin: 10px 0;">3. Receba sua rotina</h3>
+      <p>Veja os passos recomendados e produtos indicados em poucos segundos.</p>
+    </div>
+  </div>
+</section>
 
     <ul class="benefits">
       <li>📌 Disponível 24/7</li>
@@ -409,37 +435,41 @@ img[src*="amazon.com"] {
       <h3>FAQ – Perguntas Frequentes</h3>
 
       <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">🧴 Como a Clara personaliza minha rotina de skincare?</div>
+    <div class="faq-question" onclick="toggleFAQ(this)"><span class="icon">+</span>🧴 Como a Clara personaliza minha rotina de skincare?</div>
     <div class="faq-answer">Com base nas suas respostas sobre tipo de pele, estilo de vida e preferências. A IA cruza essas informações com conhecimentos dermatológicos e recomenda uma rotina com passos adaptados ao seu perfil.</div>
   </div>
 
       <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">🔐 É seguro usar inteligência artificial para cuidados com a pele?</div>
+    <div class="faq-question" onclick="toggleFAQ(this)"><span class="icon">+</span>🔐 É seguro usar inteligência artificial para cuidados com a pele?</div>
     <div class="faq-answer">Sim. A Clara foi desenvolvida com base em fontes confiáveis e orientações dermatológicas. Ela oferece sugestões educativas, sem substituir o acompanhamento de profissionais da área da saúde.</div>
   </div>
 
       <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">📧 Preciso criar uma conta?</div>
+   <div class="faq-question" onclick="toggleFAQ(this)"><span class="icon">+</span>📧 Preciso criar uma conta?</div>
     <div class="faq-answer">Não. O atendimento é totalmente gratuito, sem necessidade de cadastro ou login. Nenhuma informação sensível é coletada.</div>
   </div>
 
       <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">🕐 Quanto tempo leva o atendimento?</div>
+    <div class="faq-question" onclick="toggleFAQ(this)"><span class="icon">+</span>>🕐 Quanto tempo leva o atendimento?</div>
     <div class="faq-answer">É quase instantâneo! A Clara responde em tempo real com sugestões baseadas nas suas respostas.</div>
   </div>
 
       <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">🛒 A Clara vende os produtos indicados?</div>
+    <div class="faq-question" onclick="toggleFAQ(this)"><span class="icon">+</span>🛒 A Clara vende os produtos indicados?</div>
     <div class="faq-answer">Não. As sugestões são baseadas em produtos com boa avaliação na Amazon Brasil, apenas como referência. Se você decidir comprar, será redirecionada para o site da Amazon — mas a decisão final é sempre sua.</div>
   </div>
 
       <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">⭐ Os produtos recomendados são confiáveis?</div>
+   <div class="faq-question" onclick="toggleFAQ(this)"><span class="icon">+</span>⭐ Os produtos recomendados são confiáveis?</div>
     <div class="faq-answer">Sim, priorizamos produtos bem avaliados e amplamente aceitos pelo público, com base em resenhas e reputação na Amazon. Ainda assim, é sempre importante ler os rótulos e consultar um dermatologista em caso de dúvida.</div>
   </div>
       
     </div>
   </main>
+
+  <div style="text-align:center; margin: 40px 0;">
+  <button class="chat-button" onclick="abrirChat()">👩‍⚕️ Quero minha rotina personalizada</button>
+</div>
 
   <footer>
     © 2025 dicasdeskincareia.com.br — Powered by Clara IA 🌿
@@ -468,24 +498,28 @@ function toggleFAQ(el) {
   const answer = el.nextElementSibling;
   const isOpen = answer.classList.contains('active');
 
-  // Fecha todas as outras abertas (opcional)
+  // Fecha outras abertas
   document.querySelectorAll('.faq-answer.active').forEach(openAnswer => {
     if (openAnswer !== answer) {
       openAnswer.classList.remove('active');
       openAnswer.previousElementSibling.classList.remove('active');
+      openAnswer.previousElementSibling.querySelector('.icon').textContent = '+';
     }
   });
 
-  // Alterna a atual
+  // Alterna atual
   answer.classList.toggle('active', !isOpen);
   el.classList.toggle('active', !isOpen);
+  el.querySelector('.icon').textContent = !isOpen ? '−' : '+';
 }
+
 
 </script>
 <script src="https://www.chatbase.co/embed.min.js" chatbaseId="HkllXYITrvFzUmhxBg7BW" id="HkllXYITrvFzUmhxBg7BW" domain="www.chatbase.co"></script>
 
 </body>
 </html>
+
 
 
 
