@@ -37,16 +37,30 @@
       font-size: 0.9rem;
     }
 
-    header {
-      position: relative;
-      height: 70vh;
-      background: url('https://images.pexels.com/photos/6785040/pexels-photo-6785040.jpeg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
+   header.hero {
+  position: relative;
+  height: 85vh;
+  background: url('https://res.cloudinary.com/dq2edkm7i/image/upload/v1756377371/IA_jwvjh0.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+header.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* camada escura sobre a imagem para melhor leitura */
+  z-index: 1;
+}
+
+header.hero .content {
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 40px;
+  margin-left: 5%;
+}
+
 
     header::before {
       content: '';
@@ -187,12 +201,14 @@
   <div class="top-bar">Mais de 10.000 usuárias satisfeitas • Atendimento seguro e sem cadastro • Baseado em ciência dermatológica</div>
 
   <header>
-    <div class="content">
-      <h1>Descubra sua rotina de skincare perfeita</h1>
-      <p>Com ajuda da Clara IA, baseada em ciência dermatológica.</p>
-      <button class="button" onclick="window.chatbase && window.chatbase('open')">Iniciar Diagnóstico</button>
-    </div>
-  </header>
+ <div class="content">
+    <h1>Sua pele analisada por inteligência artificial, em segundos</h1>
+    <p>
+      Descubra uma rotina de skincare personalizada com base no seu tipo de pele, estilo de vida e necessidades específicas.<br />
+      A Clara IA combina ciência dermatológica com tecnologia de ponta para te oferecer recomendações seguras, eficazes e sem necessidade de cadastro.
+    </p>
+    <button class="button" onclick="window.chatbase && window.chatbase('open')">Iniciar Diagnóstico</button>
+  </div>
 
   <main>
     <section class="video-container">
@@ -321,3 +337,4 @@
 
 </body>
 </html>
+
