@@ -62,29 +62,7 @@ header.hero .content {
 }
 
 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 1;
-    }
-
-    header .content {
-      z-index: 2;
-      max-width: 700px;
-      padding: 0 20px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
+  
 
     .button {
       background: var(--accent);
@@ -200,7 +178,8 @@ header.hero .content {
 
   <div class="top-bar">Mais de 10.000 usuárias satisfeitas • Atendimento seguro e sem cadastro • Baseado em ciência dermatológica</div>
 
-  <header>
+ <header class="hero">
+
  <div class="content">
     <h1>Sua pele analisada por inteligência artificial, em segundos</h1>
     <p>
@@ -338,5 +317,6 @@ header.hero .content {
 
 </body>
 </html>
+
 
 
